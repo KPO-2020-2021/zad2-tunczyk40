@@ -1,5 +1,6 @@
 #include <iostream>
 #include "BazaTestu.hh"
+#include "WyrazenieZesp.hh"
 
 using namespace std;
 
@@ -33,14 +34,23 @@ int main(int argc, char **argv)
 
   WyrazenieZesp   WyrZ_PytanieTestowe;
   
-  while (PobierzNastpnePytanie(&BazaT,&WyrZ_PytanieTestowe)) {
-    cout << " Czesc rzeczywista pierwszego argumentu: ";
-    cout << WyrZ_PytanieTestowe.Arg1.re << endl;
+  while (PobierzNastpnePytanie(&BazaT,&WyrZ_PytanieTestowe)) 
+  {
+    LZespolona Wynik;
+    Wynik = WyrZ_PytanieTestowe.Arg1 + WyrZ_PytanieTestowe.Arg2;
+    wyswietl(WyrZ_PytanieTestowe.Arg1  );
+    cout << "\t";
+    wyswietl(WyrZ_PytanieTestowe.Arg2  );
+    wczytajiporownaj(Wynik);
+    cout << endl;
+
+
   }
+  
+  
 
   
   cout << endl;
   cout << " Koniec testu" << endl;
   cout << endl;
-
 }

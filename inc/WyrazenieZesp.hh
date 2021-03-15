@@ -1,6 +1,7 @@
 #ifndef WYRAZENIEZESP_HH
 #define WYRAZENIEZESP_HH
-
+#include <iostream>
+using namespace std;
 
 
 #include "LZespolona.hh"
@@ -27,9 +28,10 @@ struct WyrazenieZesp {
  * Funkcje ponizej nalezy zdefiniowac w module.
  *
  */
-
+void wyswietl(LZespolona Skl);
 
 void Wyswietl(WyrazenieZesp  WyrZ);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
+bool wczytajiporownaj(LZespolona Wynik);
 
 #endif

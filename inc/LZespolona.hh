@@ -1,6 +1,7 @@
 #ifndef LZESPOLONA_HH
 #define LZESPOLONA_HH
 
+
 /*!
  *  Plik zawiera definicje struktury LZesplona oraz zapowiedzi
  *  przeciazen operatorow arytmetycznych dzialajacych na tej 
@@ -21,10 +22,13 @@ struct  LZespolona {
  * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
  */
 
-bool  operator == (LZespolona  Skl1,  LZespolona  Skl2);
 
 LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
+LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
+LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
+double Sprzezenie (LZespolona Skl2);
+double Modul (LZespolona Skl2);
+LZespolona  operator / (LZespolona Skl1, LZespolona Skl2);
 
-LZespolona operator / (LZespolona Skl1, double Skl2);
 
 #endif
