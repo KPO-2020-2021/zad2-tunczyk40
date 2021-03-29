@@ -1,10 +1,10 @@
 #ifndef WYRAZENIEZESP_HH
 #define WYRAZENIEZESP_HH
-#include <iostream>
-using namespace std;
+
 
 
 #include "LZespolona.hh"
+#include <iostream>
 
 
 /*!
@@ -28,10 +28,14 @@ struct WyrazenieZesp {
  * Funkcje ponizej nalezy zdefiniowac w module.
  *
  */
-void wyswietl(LZespolona Skl);
 
-void Wyswietl(WyrazenieZesp  WyrZ);
+
+void wyswietlanie(LZespolona Lz);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
-bool wczytajiporownaj(LZespolona Wynik);
+void Wyswietl(WyrazenieZesp  WyrZ);
+std::ostream& operator << (std::ostream &StrmWy, const LZespolona &Lz);
+std::ostream& operator << (std::ostream &StrmWy, const WyrazenieZesp &WyrZ);
+std::istream& operator >> (std::istream &StrmWe, LZespolona &Lz);
+std::istream& operator >> (std::istream &StreamWe, WyrazenieZesp& wyrazenie);
 
 #endif

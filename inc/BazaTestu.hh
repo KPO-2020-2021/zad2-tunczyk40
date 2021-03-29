@@ -28,4 +28,3 @@ bool InicjalizujTest( BazaTestu  *wskBazaTestu, const char*  sNazwaTestu );
 bool PobierzNastpnePytanie( BazaTestu  *wskBazaTestu,  WyrazenieZesp *wskWyr );
 
 #endif
- 

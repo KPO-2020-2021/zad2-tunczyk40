@@ -2,39 +2,38 @@
 #include "./doctest/doctest.h"
 #include "LZespolona.hh"
 
-TEST_CASE("Test LZespolona dzielenie przez skalar 1") {
-    LZespolona x, y;
-    double t = 2;
+TEST_CASE("Test LZespolona odejmowanie") 
+{
+    LZespolona x, y, z;
     
-    x.re = 2;
-    x.im = 2;
+    x.re = 12.0030;
+    x.im = 4.5;
 
-    y.re = 1;
-    y.im = 1;
+    y.re = 11.0005;
+    y.im = 8.2;
+
+    z.re = 1.0025;
+    z.im = -3.7;
    
-    CHECK(x/t == y);
+    CHECK((x-y) == z);
 }
 
-TEST_CASE("Test LZespolona dzielenie przez skalar 2") {
-    LZespolona x, y;
-    double t = 3;
+TEST_CASE("Test LZespolona odejmowanie v2") 
+{
+    LZespolona x, y, z;
     
-    x.re = 2;
-    x.im = 2;
+    
+    x.re = 2.1111;
+    x.im = 2.1111;
 
-    y.re = 1;
-    y.im = 1;
+    y.re = 1.0523;
+    y.im = 1.0523;
+
+    z.re = 1.0588;
+    z.im = 1.0588;
    
-    CHECK(x/t == y);
+    CHECK((x-y) == z);
 }
 
-TEST_CASE("Test LZespolona dzielenie przez skalar - zero") {
-    LZespolona x;
-    double t = 0;
-    
-    x.re = 2;
-    x.im = 2;
- 
-   WARN_THROWS(x/t);
-}
+
 
